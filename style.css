@@ -1,36 +1,104 @@
+:root {
+  --link-color: #A31621;
+  --main-color: #90C2E7;
+  --text-color: white;
+  --backup-color: #FCF7F8;
+  --border-color: #CED3DC;
+  --background-color: #4E8098;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kode Mono";
+  color: var(--text-color);
+  list-style: none;
+
+  .debug {
+    border: 1px solid var(--border-color);
+  }
+
+  a:visited, a:link {
+    color: var(--text-color);
+  }
+
+  a:active, a:hover {
+    color: var(--link-color);
+  }
+
+  body {
+    background-color: var(--background-color);
+  
+    .intro-container {
+      padding: 10px;
+      margin: 50px auto 0;
+      width: 80%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      background-color: var(--main-color);
+    }
+
+    .sections {
+      width: 80%;
+      height: fit-content;
+      padding: 10px;
+      margin: auto;
+      background-color: var(--main-color);
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+    }
+
+    .section-label {
+      width: 80%;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .info-container {
+      text-align: center;
+    }
+
+    .work-label {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .work-contents {
+      border: 2px solid var(--border-color);
+      background-color: var(--background-color);
+      padding: 50px 0;
+      text-align: center;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+
+  }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
+@media (max-width: 700px) {
+  .intro-container {
+    flex-direction: column;
+    gap: 20px;
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    .logo-name {
+      text-align: center;
+    }
 
-header ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+    .section-bookmarks {
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-header a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-header a:hover {
-    color: #007bff;
+    .section-bookmarks > * {
+      margin: auto;
+    }
+  }
 }
