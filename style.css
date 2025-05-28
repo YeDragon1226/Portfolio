@@ -15,9 +15,9 @@
   color: var(--text-color);
   list-style: none;
 
-  .debug {
+  /* .debug {
     border: 1px solid var(--border-color);
-  }
+  } */
 
   a:visited, a:link {
     color: var(--text-color);
@@ -46,7 +46,7 @@
     .sections {
       width: 80%;
       height: fit-content;
-      padding: 10px;
+      padding: 20px;
       margin: auto;
       background-color: var(--main-color);
       border: 2px solid var(--border-color);
@@ -76,6 +76,13 @@
       display: flex;
       flex-flow: wrap;
       justify-content: center;
+      gap: 50px;
+    }
+
+    .account-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       gap: 50px;
     }
 
